@@ -61,8 +61,7 @@ function fillHandler(event){
 }
 
 function saveHandler(event){
-    
-    console.log(saveBtn.style);
+    // console.log(saveBtn.style);
     saveBtn.style.display='inline';
     saveBtn.addEventListener('click',downloadHandler);
 }

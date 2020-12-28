@@ -1,4 +1,4 @@
 # paintJS
-Painting board with vanila JS
+Painting board with Vanila JS
 
 https://jjonyo.github.io/paintJS/.

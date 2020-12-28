@@ -20,6 +20,7 @@
                     <div class="controls__color" style="background-color: #5ac8fa;"></div>
                     <div class="controls__color" style="background-color: #0579ff;"></div>
                     <div class="controls__color" style="background-color: #5856d6;"></div>
+                    <input type="color" class='controls__color controls__color_custom'></input>
                 </div>
             </div>
         </div>
@@ -30,13 +31,15 @@
             <button id="jsMode">Fill</button>
             <button id="jsSave">Save</button>
         </div>
-        <span class='msg_box'>
-            Do you want to save it?
-            <span class='save__btns'>
-                <button id="saveBtn">YES</button>
-                <button id="saveBtn">NO</button>
+        <div class="confirm_save">
+            <span class='msg_box'>
+                Do you want to save it?
+                <span class='save__btns'>
+                    <button id="saveBtn">YES</button>
+                    <button id="saveBtn">NO</button>
+                </span>
             </span>
-        </span>
+        </div>
         <script src="app.js"></script>
         <script src="colors.js"></script>
     </body>
