@@ -3,6 +3,7 @@ const ctx=canvas.getContext('2d');
 let jsRange=document.querySelector('#jsRange');
 const mode=document.querySelector('#jsMode');
 const save=document.querySelector('#jsSave');
+const saveBtn=document.querySelector('.msg_box');
 
 const INITIAL_COLOR='#2c2c2c';
 canvas.width=700;
@@ -60,12 +61,23 @@ function fillHandler(event){
 }
 
 function saveHandler(event){
-    const imageURL=canvas.toDataURL("image/png");
-    console.log(imageURL);
-    const link=document.createElement("a");
-    link.href=imageURL;
-    link.download='paintJS';
-    link.click();
+    
+    console.log(saveBtn.style);
+    saveBtn.style.display='inline';
+    saveBtn.addEventListener('click',downloadHandler);
+}
+
+function downloadHandler(event){
+    const select=event.target.innerHTML;
+    if (select === 'YES'){
+        const imageURL=canvas.toDataURL("image/png");
+        const link=document.createElement("a");
+        link.href=imageURL;
+        link.download='paintJS';
+        link.click();
+    }
+    saveBtn.style.display='none';
+
 }
 
 function contextHandler(event){
